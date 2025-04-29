@@ -1,7 +1,11 @@
+import { ChatProvider } from "@/context/chat-context";
+
 export default function Home() {
   return (
     <main>
-      <h1>oi</h1>
+      <ChatProvider>
+        <div></div>
+      </ChatProvider>
     </main>
   );
 }
