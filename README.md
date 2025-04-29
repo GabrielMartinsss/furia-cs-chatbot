@@ -74,3 +74,13 @@ Siga os passos abaixo para rodar o projeto em ambiente local:
 ```bash
    ollama run gemma2
 ```
+
+## 🧑‍💻 Autor
+
+Este projeto foi desenvolvido por **GabrielMartinsss** como um experimento educacional e pessoal com foco em IA, NLP e aplicações no universo de e-sports.  
+Sinta-se à vontade para explorar, aprender e adaptar.
+
+## 📄 Licença
+
+Distribuído sob a licença MIT.  
+Veja o arquivo [`LICENSE`](./LICENSE) para mais detalhes.
