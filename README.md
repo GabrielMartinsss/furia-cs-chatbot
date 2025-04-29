@@ -53,6 +53,48 @@ export async function POST(request: Request) {
 }
 ```
 
+---
+
+## 📣 Aviso Importante sobre o Modelo de IA
+
+**Atenção:** O modelo de IA utilizado neste projeto atualmente é o **Gemma2**, através do **Ollama**. No entanto, como o modelo pode estar desatualizado, há a possibilidade de ele não fornecer respostas precisas ou completamente atualizadas, especialmente sobre tópicos recentes.
+
+Para obter resultados mais precisos e atualizados, recomenda-se substituir o uso do **Ollama** por **OpenAI** (como o modelo GPT-4 ou GPT-3.5), que são mais avançados e frequentemente atualizados.
+
+Para realizar essa mudança, basta ajustar a integração com o modelo na configuração do projeto para usar a API da OpenAI.
+
+#### Exemplo de código da integração com o modelo de IA com `OpenAI`:
+
+```ts
+import { Configuration, OpenAIApi } from 'openai-edge';
+import { OpenAIStream, StreamingTextResponse } from 'ai';
+
+const config = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY // Chave da OpenAI
+})
+const openai = new OpenAIApi(config);
+export const runtime = 'edge';
+
+export async function POST(request: Request) {
+  const { message } = request.json();
+
+  const response = await openai.createChatCompletion({
+    model: 'gpt-3.5-turbo', // versão do modelo
+    stream: true;
+    message
+  })
+  const stream = OpenAIStream(response);
+
+  return new StreamingTextResponse(stream);
+}
+```
+#### ⚠️ lembrete
+ - Ao utilizar a OpenAI a dependência necessária sera `openai-edge` ao invés de `ollama-ai-provider`
+
+ - OpenAI não é gratuita. 
+
+---
+
 ## 🧪 Como rodar o projeto localmente
 
 Siga os passos abaixo para rodar o projeto em ambiente local:
