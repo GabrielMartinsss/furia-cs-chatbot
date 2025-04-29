@@ -1,3 +1,4 @@
+import { Chat } from "@/components/chat";
 import { QuickMessages } from "@/components/quick-messages";
 import { Button } from "@/components/ui/button";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -29,6 +30,7 @@ export default function Home() {
               </DropdownMenu>
             </div>
           </header>
+          <Chat />
         </div>
       </ChatProvider>
     </main>
