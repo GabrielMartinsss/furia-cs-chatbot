@@ -101,7 +101,7 @@ Siga os passos abaixo para rodar o projeto em ambiente local:
 
 1. **Clone o repositório:**
 ```bash
-   git clone https://github.com/seu-usuario/furia-cs-chatbot.git
+   git clone https://github.com/GabrielMartinsss/furia-cs-chatbot.git
    cd furia-cs-chatbot
 ```
 2. **Instale as dependências:**
