@@ -112,7 +112,7 @@ Siga os passos abaixo para rodar o projeto em ambiente local:
 ```bash
    npm run dev
 ```
-4. **InsCertifique-se de que o Ollama está rodando com o modelo gemma2:**
+4. **Certifique-se de que o Ollama está rodando com o modelo gemma2:**
 ```bash
    ollama run gemma2
 ```
